@@ -56,6 +56,13 @@ head/foot}%
   \titlepage
  % \hyperlink{Teil_2}{\beamerbutton{Go part 2}}
 \end{frame}
+\AtBeginSection[] % Do nothing for \section*
+{
+\begin{frame}<beamer>
+\frametitle{Inhalt}
+\tableofcontents[currentsection]
+\end{frame}
+}
 \begin{frame}
   \frametitle{Industrie - Entwicklung}
   \begin{itemize}
@@ -65,8 +72,8 @@ head/foot}%
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Vorteile und Nachteile}
+\begin{frame}{Vorteile und Nachteile}
+  \framesubtitle{Bei Industrie 4.0}
     \begin{description} 
         \item[+] Wartung
         \item[+] Produktion anpassbar 
@@ -82,7 +89,7 @@ head/foot}%
     \item Mehrstufige Firewall
   \end{itemize}
 \end{frame}
-
+\section{Mikrocontroller - I/O}
 \begin{frame}
   \frametitle{I/O für Mikrocontroller}
   \begin{itemize}
@@ -118,9 +125,22 @@ int main(){
     \item[setzen (high / ein)] \lstinline!PORTn |= (1 << PnX);!
     \item[löschen (low / aus)] \lstinline!PORTn &= ~(1 << PnX);!
     \item[test / Abfrage] \lstinline!if(PINn & (1 << PnX))!
+    \item[Doku] https://www.mikrocontroller.net/articles/AVR-GCC-Tutorial
 \end{description}
 Woher weiß ich welcher Arduino Pin welcher Port ist?\\
 microchip xplained mini 328p - Datenblatt
 \end{frame}
+%\section{IoT und Protokolle}
+%\begin{frame}{Arbeitsauftrag}
+%    \begin{enumerate}
+%        \item Bildet Arbeitsgruppen zu vier Personen.
+%        \pause
+%        \item Entsendet je eine Person in Die Fachgruppen:\\MQTT,
+%        \\LoRaWAN, \\ IoT via Mobilfunk und \\ Industial IoT
+%        \item informiert euch in der Fachgruppe zum jeweiligen Thema.
+%        \pause
+%        \item kehrt wieder in die Arbeitsgruppen zurück und\\ stellt den anderen euer Thema vor.
+%    \end{enumerate}
+%\end{frame}
 \end{document}
 
